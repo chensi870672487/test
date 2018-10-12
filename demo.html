@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>投票</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <style>
+    html,
+    body {
+        width:100%;
+        font-size: 20px;
+        overflow-x: hidden;
+    }
+
+    html,
+    body,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper{
+        padding:10%;
+        box-sizing: border-box;
+    }
+    #title {
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    #showImg {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    #contentImage{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    #name {
+        font-size: .8rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .abstract{
+        font-size: .8rem;
+        line-height: 1.2rem;
+        margin: 1rem auto;
+    }
+    #createTime{
+        font-size: .6rem;
+        text-align: center;
+        margin-top: .3rem;
+    }
+    .school_p{
+        font-size: .6rem;
+        text-align: center;
+        margin: .3rem auto;
+    }
+
+    .imgBox {
+        display:none;
+        margin-bottom: 1rem;
+    }
+    .imgBox1{
+        margin-bottom: 1rem;
+    }
+    .info {
+        margin-top: 1rem;
+    }
+
+    .info p {
+        font-size: 0.8rem;
+        text-align: cneter;
+        line-height: 1.2rem;
+        padding: 0 10%;
+    }
+    .swiper-container {
+        width:100%;
+        margin-bottom:1rem;
+    } 
+    .swiperImg{
+        width:100%;
+        height:11rem;
+    }
+    .arrow{
+        position:fixed;
+        top:-3rem;
+        right:-3rem;
+        border:3rem solid;
+        border-color:#fff #fff #fff #E6545B;
+        width: 0;
+        height:0;
+        transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+        -webkit-transform:rotate(-45deg);
+        -o-transform:rotate(-45deg); 
+    }
+    #typeName{
+        position:fixed;
+        top: 1.2rem;
+        right: 0rem;
+        font-size:0.8rem;
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        -o-transform:rotate(45deg);
+        color:#fff;
+    }
+    .font-w{
+        font-weight:700;
+    }
+    audio{
+        width:100%;
+    }
+    video{
+        width:100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="arrow"></div>
+        <p id="typeName"></p>
+        <p id='title'></p>
+        <p id='name'>作者：<apan id="author"></apan></p>
+        <p class='school_p'>(&nbsp;<span id="schoolName"></span>&nbsp;)</p>
+        <p id='createTime'></p>
+        <div class="imgBox">
+            <img src='http://content.tfjyzx.com/works/2018/9/30/1538322127017.jpg' alt="" id="showImg">
+        </div>
+        <p class="abstract"><span class="font-w">摘要：</span><span id='abstractInfo'></span></p>
+        <p class="abstract contentBox"><span class="font-w">内容：</span><span id='contentInfo'></span></p>
+        <div class="imgBox1">
+            <img src='http://content.tfjyzx.com/works/2018/9/30/1538322127017.jpg' alt="" id="contentImage">
+        </div>
+        <div id="box">
+            
+        </div>
+        <div class="audioBox">
+            <audio src="http://content.tfjyzx.com/report/2018/7/16/1531704102285.aac" id="audioId" controls="controls" loop="loop" autoplay="autoplay"></audio>
+        </div>
+        <div class="videoBox">
+            <video src="http://video2.tfjyzx.com/Act-ss-mp4-hd/1538322174157.mp4" id="videoId" controls="controls" loop="loop" autoplay="autoplay"></video>
+        </div>
+    </div>
+</body>
+
+</html>
