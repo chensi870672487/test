@@ -3,11 +3,12 @@ $(function(){
 	    
 	    var detailsId=getAllUrlParams(urlString).id;
 	    $.ajax({
-	        url: 'http://127.0.0.1:8081/list',
+	        url: 'http://www.tfjyzx.com/report/detail',
 	        type:'post',
             data:{id:detailsId},
 	        dataType: 'json',
 	        success:function(data){
+                $(".wrapper").show();
 	        	console.log(data);
 	        	if(data.resultCode==100000){
                     $("#title").html(data.detail.title);
@@ -61,11 +62,12 @@ $(function(){
                           })
                     }
 	        	}else{
-	        		alert('无数据！')
+                    $(".wrapper").hide();
+	        		alert('暂无数据，请稍后重试！')
 	        	}
 	        },
 	        error:function(){
-	        	alert('网络连接错误！')
+	        	alert('网络连接错误！');
 	        }
 	    })
     //获url中的参数
